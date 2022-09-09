@@ -1,19 +1,29 @@
-#projeto sistema de login
+import PySimpleGUI as sg
 
-#dar as primeiras opções ao usuario
+layout = [
+      [sg.Text('Usuário')],
+      [sg.Input(key='usuario')],
+      [sg.Text('Senha')],
+      [sg.Input(key='senha')],
+      [sg.Button('Login')],
+      [sg.Text(key='mensagem')],
+]
 
-print('Bem vindo ao sistema de login!')
-print('Para efetuar cadastro digite 1 ')
-print('Para efetuar o login digite 2')
-print('Para sair digite 3')
+window = sg.Window('Login', layout=layout)
 
-acao = int(input(''))
+while True:
+    event, values = window.read()
+    if event == sg.WIN_CLOSED:
+        break
+    elif event == 'Login':
+        senha_correta = '123456'
+        usuario_correto = 'Lucas'
+        usuario = values['usuario']
+        senha = values['senha']
+        if senha == senha_correta and usuario == usuario_correto:
+            window['mensagem'].update('Login feito com sucesso!')
+        else:
+            window['mensagem'].update('Senha ou usuario incorreto!')
+            
 
-if acao == '1' 
-
-print('acao1')
-
-acao1 = ('Selecione um nome de usuario:')
-usuario = input('')
-
-
+ 
