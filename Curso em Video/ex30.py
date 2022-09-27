@@ -8,4 +8,4 @@ if sal >= 1250:
 else:
     print('Seu salário era de R${}, com o reajuste de 15% agora você recebe R${}!' .format(sal, sal15))
 
-    
+        
