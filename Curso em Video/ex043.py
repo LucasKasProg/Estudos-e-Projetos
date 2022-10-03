@@ -1,6 +1,6 @@
 n = int(input('Digite um numero: '))
-for c in range(0, 10, 1):
-    n = n * c
-print('A tabuada de {} é {}'.format(n,c))
+for c in range(1, 11):
+    print('{} x {:2} = {}'.format(n,c, n*c))
+    
     
 
